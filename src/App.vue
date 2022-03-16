@@ -75,8 +75,8 @@ export default {
           ? [
               {
                 id: "1",
-                title: "Walk the dogs",
-                description: "walk lil Aki and do 5 laps",
+                title: "Walk the dog",
+                description: "Walk lil Aki and do 5 laps",
                 done: "true",
                 expanded: "false",
               },
