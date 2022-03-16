@@ -29,7 +29,7 @@
             'grid grid-cols-1 rounded-full w-8 h-8',
             task.done ? 'bg-green-500' : 'bg-black',
           ]"
-          @click="toggleDone()"
+          @click="toggleDone($event)"
         >
           <div class="place-self-center rounded-full bg-white w-3 h-3"></div>
         </button>
@@ -61,7 +61,6 @@
 <script>
 export default {
   name: "TaskEntry",
-
   props: {
     task: Object,
   },
@@ -72,7 +71,8 @@ export default {
       new_task.expanded = !this.task.expanded;
       this.updateTask(new_task);
     },
-    toggleDone() {
+    toggleDone(event) {
+      event.stopPropagation();
       let new_task = this.task;
       new_task.done = !this.task.done;
       this.updateTask(new_task);
