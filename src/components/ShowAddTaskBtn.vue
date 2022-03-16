@@ -4,8 +4,9 @@
       add-btn
       flex flex-row
       rounded-full
-      w-20
-      h-20
+      w-16
+      h-16
+      sm:w-20 sm:h-20
       shadow-md
       relative
       items-center
